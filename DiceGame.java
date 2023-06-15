@@ -1,4 +1,13 @@
 import java.util.Random;
+
+class Jadge{
+    int E = 7;
+    void jadge(int x){
+	if(x >= E)System.out.println("You won!");
+	else System.out.println("You lost.");
+    }
+}
+
 class DiceGame{
     public static void main(String[] args){	
 	Random rand = new Random();
@@ -10,5 +19,8 @@ class DiceGame{
 	    sum += temp;
 	}
 	System.out.println("Total value: " + sum);
+
+	Jadge ja = new Jadge();
+	ja.jadge(sum);
     }
-}
+} 
